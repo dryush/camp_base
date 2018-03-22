@@ -15,10 +15,12 @@ class CampsController < ApplicationController
   # GET /camps/new
   def new
     @camp = Camp.new
+    @cities = City.all
   end
 
   # GET /camps/1/edit
   def edit
+    @cities = City.all
   end
 
   # POST /camps
