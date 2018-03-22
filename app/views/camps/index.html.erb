@@ -1,31 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Camps</h1>
+<div class="container">
+  <h1>Список турбаз</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>City</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @camps.each do |camp| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= camp.name %></td>
-        <td><%= camp.description %></td>
-        <td><%= camp.city %></td>
-        <td><%= link_to 'Show', camp %></td>
-        <td><%= link_to 'Edit', edit_camp_path(camp) %></td>
-        <td><%= link_to 'Destroy', camp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Регион</th>
+        <th>Город</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @camps.each do |camp| %>
+        <tr>
+          <td><%= camp.city.region.name %></td>
+          <td><%= camp.city.name %></td>
+          <td><%= camp.name %></td>
+          <td><%= camp.description %></td>
+          <td><%= link_to 'Подробнее', camp %></td>
+          <td><%= link_to 'Редактировать', edit_camp_path(camp) %></td>
+          <td><%= link_to 'Удалить', camp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
 
-<%= link_to 'New Camp', new_camp_path %>
+  <%= link_to 'Добавить новую турбазу', new_camp_path %>
+
+</div>
+
