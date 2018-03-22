@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @camp.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @camp.description %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @camp.city %>
+</p>
+
+<%= link_to 'Edit', edit_camp_path(@camp) %> |
+<%= link_to 'Back', camps_path %>
