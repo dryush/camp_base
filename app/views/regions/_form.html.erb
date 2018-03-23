@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :country_id %>
-    <%= form.text_field :country_id, id: :region_country_id %>
+    <%= form.collection_select :country_id, countries, :id, :name%>
   </div>
 
   <div class="actions">
