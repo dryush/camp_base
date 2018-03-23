@@ -14,11 +14,13 @@ class CitiesController < ApplicationController
 
   # GET /cities/new
   def new
+    @regions = Region.all
     @city = City.new
   end
 
   # GET /cities/1/edit
   def edit
+    @regions = Region.all
   end
 
   # POST /cities

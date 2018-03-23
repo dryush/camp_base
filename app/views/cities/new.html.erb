@@ -1,5 +1,5 @@
 <h1>New City</h1>
 
-<%= render 'form', city: @city %>
+<%= render partial: 'form', locals: {city: @city, regions: @regions}%>
 
 <%= link_to 'Back', cities_path %>
