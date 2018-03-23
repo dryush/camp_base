@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  adapter: pg
   database: camps_base_production
   username: camps_base
   password: <%= ENV['CAMPS_BASE_DATABASE_PASSWORD'] %>
