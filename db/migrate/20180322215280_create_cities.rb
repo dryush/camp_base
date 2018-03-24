@@ -4,7 +4,7 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.string :name
       t.references :region, foreign_key: true
 
-      #t.timestamps
+      t.timestamps
     end
   end
 end
