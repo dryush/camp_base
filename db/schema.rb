@@ -16,22 +16,30 @@ ActiveRecord::Schema.define(version: 20180322215505) do
     t.string "name"
     t.string "description"
     t.bigint "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_camps_on_city_id"
   end
 
   create_table "cities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.bigint "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["region_id"], name: "index_cities_on_region_id"
   end
 
   create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.bigint "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
