@@ -1,0 +1,91 @@
+
+cleanSelect = (select_) ->
+  if select_?.options?
+    select_.options.length = 0
+    select_.options[0] = new Option('Не выбрано', -1, true, true)
+
+refeelSelect = (select_, data,
+    getVal = (data)-> data.id,
+    getText = (data)-> data.name) ->
+      if select_?.options?
+        cleanSelect(select_)
+        for d in data
+          select_.options[select_.options.length] = new Option(getText(d), getVal(d))
+
+class CascadeSelect
+  constructor: () ->
+    @lastSelect = null
+    @rootSelect = null
+    @rootUrl = null
+
+  @cleanAllSelects: (root = @rootSelect) ->
+    sel = root
+    while sel?
+      cleanSelect(sel)
+      sel = sel.nextSelect
+
+
+  addSelect: (selectDom, sourceUrl, valName = null) ->
+    selectDom.sourceUrl = sourceUrl
+    selectDom.valName = valName
+    if @lastSelect?
+      @lastSelect.nextSelect = selectDom
+      $(@lastSelect).on('change', (e) ->
+        val = e.currentTarget.options[e.currentTarget.selectedIndex].value
+        if val < 0
+          CascadeSelect.cleanAllSelects e.currentTarget.nextSelect
+
+
+        else
+          dataStr = ""
+          dataStr += e.currentTarget.valName + "=" + val
+          $.ajax({
+            type: "GET"
+            url: e.currentTarget.nextSelect.sourceUrl
+            data:  dataStr
+            dataType: "JSON"
+            success: (data) -> refeelSelect(e.currentTarget.nextSelect, data)
+          })
+      )
+    else
+      @rootSelect = selectDom
+      @rootUrl = sourceUrl
+
+    @lastSelect = selectDom
+
+    return this;
+
+  fillFirst: () ->
+    sel = @rootSelect
+    CascadeSelect.cleanAllSelects sel
+
+    $.getJSON(
+      @rootUrl,
+      (data) -> refeelSelect( sel, data)
+    )
+
+
+
+
+class LocationSelect extends CascadeSelect
+  @locFilters: ['.location-select-country', '.location-select-region', '.location-select-city']
+  @locUrls:    ['/countries/','/regions/','/cities/']
+  @locValNames:['country_id', 'region_id','city_id']
+  constructor: (@locSelectDom) ->
+    super
+    for i in [0... LocationSelect.locFilters.length]
+      this.addSelect( $(@locSelectDom).find( LocationSelect.locFilters[i])[0],
+          LocationSelect.locUrls[i],
+          LocationSelect.locValNames[i] )
+
+
+$(document).on 'turbolinks:load', ->
+
+  location_selects = $('.location-select')
+  locCascadeSelects = []
+  for location_select in location_selects
+    locCascadeSelects.push( new LocationSelect(location_select))
+
+  for locCascadeSelect in locCascadeSelects
+    locCascadeSelect.fillFirst()
+
