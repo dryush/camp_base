@@ -4,7 +4,12 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+    if params[:region_id]
+      @cities = Region.find(params[:region_id]).cities
+    else
+      @cities = City.all
+    end
+
   end
 
   # GET /cities/1
