@@ -1,5 +1,8 @@
-<h1>Создание записи о новой турбазе</h1>
 
-<%= render partial:'form', :locals => {camp: @camp, cities: @cities}%>
 
-<%= link_to 'Назад', camps_path %>
+
+  <h1>Создание новой записи о  турбазе</h1>
+
+    <%= render partial:'form', :locals => {camp: @camp, cities: @cities}%>
+    <%= link_to 'Назад', camps_path %>
+

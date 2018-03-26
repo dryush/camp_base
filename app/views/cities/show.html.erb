@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Название:</strong>
-  <%= @city.name %>
-</p>
+  <p>
+    <strong>Название:</strong>
+    <%= @city.name %>
+  </p>
 
-<p>
-  <strong>Регион:</strong>
-  <%= @city.region.name %>
-</p>
+  <p>
+    <strong>Регион:</strong>
+    <%= @city.region.name %>
+  </p>
 
-<%= link_to 'Редактировать', edit_city_path(@city) %> |
-<%= link_to 'Назад', cities_path %>
+  <%= link_to 'Редактировать', edit_city_path(@city) %> |
+  <%= link_to 'Назад', cities_path %>

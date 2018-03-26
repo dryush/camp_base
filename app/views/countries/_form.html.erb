@@ -13,10 +13,11 @@
 
   <div class="field">
     <%= form.label "Название" %>
-    <%= form.text_field :name, id: :country_name %>
+    <%= form.text_field :name, id: :country_name, :required=>"", :class =>"form-control" %>
   </div>
 
-  <div class="actions">
+  </br>
+  <div class="actions" align="right">
     <%= form.submit :"Готово" %>
   </div>
 <% end %>

@@ -1,34 +1,30 @@
 
-<%= form_with(model: camp, local: true) do |form| %>
-  <% if camp.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(camp.errors.count, "error") %> К сожаление, сохранить записиь не удалось, попробуйте ещё:</h2>
+    <%= form_with(model: camp, local: true) do |form| %>
+      <% if camp.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(camp.errors.count, "error") %> К сожаление, сохранить записиь не удалось, попробуйте ещё:</h2>
 
-      <ul>
-      <% camp.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% camp.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :"Название" %>
-    <%= form.text_field :name, id: :camp_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :"Описание"%>
-    <%= form.text_field :description, id: :camp_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :"Ближайший город" %>
-    <%= form.collection_select :city_id, cities, :id, :name%>
-
-  </div>
-
-  <div class="actions">
-    <%= form.submit :"Готово" %>
-  </div>
-<% end %>
+      <div class="field">
+        <%= form.label :"Название" %>
+        <%= form.text_field :name, id: :camp_name, :required=>"",:class =>"form-control"%>
+      </div>
+      <div class="field">
+        <%= form.label :"Описание"%>
+        <%= form.text_area :description, id: :camp_description,:required=>"", :class =>"form-control", :resize => 'none'%>
+      </div>
+      <div class="field">
+        <%= form.label :"Ближайший город" %>
+        <%= form.collection_select :city_id, cities, :id, :name ,{}, { :class =>"form-control"} %>
+      </div>
+      </br>
+      <div class="actions" align="right">
+        <%= form.submit :"Готово" %>
+      </div>
+    <% end %>

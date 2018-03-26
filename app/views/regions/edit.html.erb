@@ -1,6 +1,8 @@
-<h1>Редактирование записи о регионе</h1>
 
-<%= render partial: 'form', locals: {region: @region, countries: @countries }%>
 
-<%= link_to 'Показать', @region %> |
-<%= link_to 'Назад', regions_path %>
+  <h1>Редактирование записи о регионе</h1>
+
+    <%= render partial: 'form', locals: {region: @region, countries: @countries }%>
+
+    <%= link_to 'Показать', @region %> |
+    <%= link_to 'Назад', regions_path %>

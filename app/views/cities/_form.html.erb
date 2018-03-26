@@ -11,18 +11,19 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= form.label "Название" %>
-    <%= form.text_field :name, id: :city_name %>
+    <%= form.text_field :name, id: :city_name, :required=>"", :class =>"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label "Регион" %>
-    <%= form.collection_select :region_id, regions, :id, :name%>
-
+    <%= form.collection_select :region_id, regions, :id, :name ,{}, {:class =>"form-control"}%>
+    </br>
   </div>
 
-  <div class="actions">
+  <div class="actions" align="right">
     <%= form.submit :"Готово" %>
   </div>
 <% end %>
