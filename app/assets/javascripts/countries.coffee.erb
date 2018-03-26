@@ -1,0 +1,38 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+
+
+filterTable = (table, camps) ->
+  campRow = []
+  for i in [1...table.rows.length]
+    tableRow = table.rows[i]
+    tableRow.style.display = 'none'
+    campRow[tableRow.cells[0].innerText] = tableRow
+
+  for camp in camps
+    if campRow[camp.id]?
+      campRow[camp.id].style.display = 'block'
+
+
+
+
+
+$(document).on 'turbolinks:load', ->
+  campsTable = $('.camps-table')[0]
+
+  filterCampsTable = (camps) ->
+    filterTable(campsTable, camps)
+
+  locSelect = $('.location-select').find('select')
+  locSelect.on 'change', (e) ->
+    selectVal = e.currentTarget.options[e.currentTarget.selectedIndex].value
+    dataStr = e.currentTarget.valName + '=' + selectVal
+
+    $.ajax({
+      type: "GET"
+      url: "/camps/"
+      data:  dataStr
+      dataType: "Json"
+      success: (data) -> filterCampsTable(data)
+    })

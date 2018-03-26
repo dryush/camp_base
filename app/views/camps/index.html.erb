@@ -5,9 +5,10 @@
 
 
   <%= render partial: 'application/location_select'%>
-  <table class="table">
+  <table class="table camps-table">
     <thead>
       <tr>
+        <th>id</th>
         <th>Регион</th>
         <th>Город</th>
         <th>Название</th>
@@ -19,6 +20,8 @@
     <tbody>
       <% @camps.each do |camp| %>
         <tr>
+
+          <td><%= camp.id%></td>
           <td><%= camp.city.region.name %></td>
           <td><%= camp.city.name %></td>
           <td><%= camp.name %></td>
