@@ -2,7 +2,7 @@
 <%= form_with(model: camp, local: true) do |form| %>
   <% if camp.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(camp.errors.count, "error") %> prohibited this camp from being saved:</h2>
+      <h2><%= pluralize(camp.errors.count, "error") %> К сожаление, сохранить записиь не удалось, попробуйте ещё:</h2>
 
       <ul>
       <% camp.errors.full_messages.each do |message| %>
@@ -18,12 +18,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :"описание"%>
+    <%= form.label :"Описание"%>
     <%= form.text_field :description, id: :camp_description %>
   </div>
 
   <div class="field">
-    <%= form.label :"ближайший город" %>
+    <%= form.label :"Ближайший город" %>
     <%= form.collection_select :city_id, cities, :id, :name%>
 
   </div>

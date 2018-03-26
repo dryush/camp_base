@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Название:</strong>
   <%= @camp.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Описание:</strong>
   <%= @camp.description %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong>Город:</strong>
   <%= @camp.city.name %>
 </p>
 
-<%= link_to 'Edit', edit_camp_path(@camp) %> |
-<%= link_to 'Back', camps_path %>
+<%= link_to 'Редактировать', edit_camp_path(@camp) %> |
+<%= link_to 'Назад', camps_path %>

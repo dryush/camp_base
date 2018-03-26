@@ -1,7 +1,7 @@
 <%= form_with(model: region, local: true) do |form| %>
   <% if region.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(region.errors.count, "error") %> prohibited this region from being saved:</h2>
+      <h2><%= pluralize(region.errors.count, "error") %> К сожаление, сохранить записиь не удалось, попробуйте ещё::</h2>
 
       <ul>
       <% region.errors.full_messages.each do |message| %>
@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label "Название" %>
     <%= form.text_field :name, id: :region_name %>
   </div>
 
   <div class="field">
-    <%= form.label :country_id %>
+    <%= form.label "Страна" %>
     <%= form.collection_select :country_id, countries, :id, :name%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :"Готово" %>
   </div>
 <% end %>
