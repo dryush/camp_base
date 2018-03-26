@@ -29,14 +29,19 @@ class CascadeSelect
     selectDom.sourceUrl = sourceUrl
     selectDom.valName = valName
     if @lastSelect?
+      #Добавляем последнему селекту ссылку на полученный
       @lastSelect.nextSelect = selectDom
+      #И наоброт
+      selectDom.previousSelect = @lastSelect
+      #Зачищаем последующии селекты при выбор значение "не выбрано"
       $(@lastSelect).on('change', (e) ->
         val = e.currentTarget.options[e.currentTarget.selectedIndex].value
+
         if val < 0
+          #Зачищаем последующии селекты при выбор значение "не выбрано"
           CascadeSelect.cleanAllSelects e.currentTarget.nextSelect
-
-
         else
+          #Заполняем значениями следующий селект
           dataStr = ""
           dataStr += e.currentTarget.valName + "=" + val
           $.ajax({
@@ -48,6 +53,7 @@ class CascadeSelect
           })
       )
     else
+      #Запоминаем корень
       @rootSelect = selectDom
       @rootUrl = sourceUrl
 
@@ -74,9 +80,11 @@ class LocationSelect extends CascadeSelect
   constructor: (@locSelectDom) ->
     super
     for i in [0... LocationSelect.locFilters.length]
-      this.addSelect( $(@locSelectDom).find( LocationSelect.locFilters[i])[0],
-          LocationSelect.locUrls[i],
-          LocationSelect.locValNames[i] )
+      this.addSelect(
+        $(@locSelectDom).find( LocationSelect.locFilters[i])[0],
+        LocationSelect.locUrls[i],
+        LocationSelect.locValNames[i]
+      )
 
 
 $(document).on 'turbolinks:load', ->

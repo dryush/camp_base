@@ -35,7 +35,13 @@ $(document).on 'turbolinks:load', ->
     #Получаем значения выбранного в селекте пункта
     selectVal = e.currentTarget.options[e.currentTarget.selectedIndex].value
     #Cоставляем строку get-запроса
-    dataStr = e.currentTarget.valName + '=' + selectVal
+    dataStr = ""
+    if selectVal >= 0
+      dataStr = e.currentTarget.valName + '=' + selectVal
+    else
+      #Если выбрано "не выбрано" - запрашиваем список согласно предыдущему селекту
+      selectVal = e.currentTarget.previousSelect?.options[e.currentTarget.previousSelect.selectedIndex].value
+      dataStr = e.currentTarget.previousSelect?.valName + '=' + selectVal
 
     $.ajax({
       type: "GET"
