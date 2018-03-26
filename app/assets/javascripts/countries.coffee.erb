@@ -4,15 +4,21 @@
 
 
 filterTable = (table, camps) ->
-  campRow = []
+  tableRowByCampIndex= []
   for i in [1...table.rows.length]
     tableRow = table.rows[i]
+    #Запоминаем изначальное значение display
+    if ! tableRow.deffaultDisplayMod?
+      tableRow.deffaultDisplayMod = tableRow.style.display
+    #Прячем строку
     tableRow.style.display = 'none'
-    campRow[tableRow.cells[0].innerText] = tableRow
+    #Запоминаем строки по индексу
+    tableRowByCampIndex[tableRow.cells[0].innerText] = tableRow
 
   for camp in camps
-    if campRow[camp.id]?
-      campRow[camp.id].style.display = 'block'
+    #Показываем строки, соответствующие переданным  турбазам
+    if tableRowByCampIndex[camp.id]?
+      tableRowByCampIndex[camp.id].style.display = tableRowByCampIndex[camp.id].deffaultDisplayMod
 
 
 
@@ -26,7 +32,9 @@ $(document).on 'turbolinks:load', ->
 
   locSelect = $('.location-select').find('select')
   locSelect.on 'change', (e) ->
+    #Получаем значения выбранного в селекте пункта
     selectVal = e.currentTarget.options[e.currentTarget.selectedIndex].value
+    #Cоставляем строку get-запроса
     dataStr = e.currentTarget.valName + '=' + selectVal
 
     $.ajax({
