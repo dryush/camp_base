@@ -4,7 +4,37 @@ class CampsController < ApplicationController
   # GET /camps
   # GET /camps.json
   def index
-    @camps = Camp.all
+    if params[:city_id]
+      @camps = City.find(params[:city_id]).camps
+    elsif params[:region_id]
+      @camps = Camp.find_by_sql('SELECT camps.* FROM regions
+	                                LEFT JOIN cities on cities.region_id = regions.id
+                                  INNER JOIN camps on camps.city_id = cities.id
+                                  WHERE regions.id =' + params[:region_id])
+
+=begin
+      @camps = Region.where(region_id: params[:region_id]).left_joins(:cities).left_joins(:regions).select(:camp).jo
+      region_id = params[:region_id].to_i
+      region = Region.find(region_id)
+      camps = []
+      region.cities.each {|city|
+        camps.append city.camps
+      }
+      @camps = camps
+=end
+    elsif params[:country_id]
+
+      @camps = Camp.find_by_sql('SELECT camps.* FROM countries
+                                  LEFT JOIN regions on regions.country_id = countries.id
+                                  LEFT JOIN cities on cities.region_id = regions.id
+                                  INNER JOIN camps on camps.city_id = cities.id
+                                  WHERE countries.id=' + params[:country_id])
+
+
+
+    else
+      @camps = Camp.all
+    end
   end
 
   # GET /camps/1
