@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Название:</strong>
-  <%= @camp.name %>
-</p>
 
-<p>
-  <strong>Описание:</strong>
-  <%= @camp.description %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Город:</strong>
-  <%= @camp.city.name %>
-</p>
+  <h1></h1>
 
-<%= link_to 'Редактировать', edit_camp_path(@camp) %> |
-<%= link_to 'Назад', camps_path %>
+    <div class="col-md-6">
+      <p>
+        <strong>Название:</strong>
+        <%= @camp.name %>
+      </p>
+
+
+      <p>
+        <strong>Описание:</strong> </br>
+        <%= @camp.description %>
+      </p>
+
+
+
+      <p>
+        <strong>Город:</strong>
+        <%= @camp.city.name %>
+      </p>
+
+
+    <%= link_to 'Редактировать', edit_camp_path(@camp) %> |
+    <%= link_to 'Назад', camps_path %>
+
+  </div>

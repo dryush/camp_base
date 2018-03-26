@@ -1,5 +1,9 @@
-<h1>Создание новой записи о городе</h1>
 
-<%= render partial: 'form', locals: {city: @city, regions: @regions}%>
 
-<%= link_to 'Назад', cities_path %>
+  <h1>Создание новой записи о городе</h1>
+  <div class="row">
+    <%= render partial: 'form', locals: {city: @city, regions: @regions}%>
+  </div>
+  <div class="row">
+    <%= link_to 'Назад', cities_path %>
+  </div>
