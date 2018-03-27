@@ -17,7 +17,8 @@
           <td><%= country.name %></td>
           <td><%= link_to 'Подробнее', country %></td>
           <td><%= link_to 'Редактировать', edit_country_path(country) %></td>
-          <td><%= link_to 'Удалить', country, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+          <td><%= link_to 'Удалить', country, method: :delete, data: { confirm: "Вы уверены?
+Удаление данной записи повлечёт за собой удаление всех связанных записей (регионов, городов, турбаз)" } %></td>
         </tr>
       <% end %>
     </tbody>

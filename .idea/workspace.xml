@@ -4,15 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/cities/index.html.erb" line="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2fec22b-40e3-414f-834b-b02e61b9a9e6" name="Default" comment="Переведена просьба подствердить удаление записи о турбазе">
+    <list default="true" id="a2fec22b-40e3-414f-834b-b02e61b9a9e6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/models/city.rb" afterPath="$PROJECT_DIR$/app/models/city.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/country.rb" afterPath="$PROJECT_DIR$/app/models/country.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/region.rb" afterPath="$PROJECT_DIR$/app/models/region.rb" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180322215254_create_regions.rb" afterPath="$PROJECT_DIR$/db/migrate/20180322215254_create_regions.rb" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180322215280_create_cities.rb" afterPath="$PROJECT_DIR$/db/migrate/20180322215280_create_cities.rb" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180322215505_create_camps.rb" afterPath="$PROJECT_DIR$/db/migrate/20180322215505_create_camps.rb" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change beforePath="$PROJECT_DIR$/app/views/cities/index.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/index.html.erb" />
+      <change beforePath="$PROJECT_DIR$/app/views/countries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/countries/index.html.erb" />
+      <change beforePath="$PROJECT_DIR$/app/views/regions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/regions/index.html.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,21 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cities/edit.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/regions/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="camp.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/camp.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,11 +97,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20180322215505_create_camps.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20180322215505_create_camps.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180322215505_create_camps.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/countries/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cities/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,16 +132,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
               <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="region.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/region.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -207,7 +203,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cities/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cities/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/regions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/countries/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/regions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/countries/edit.html.erb" />
@@ -223,7 +218,6 @@
         <option value="$PROJECT_DIR$/app/controllers/locations_controller.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/assets/data generation/camp names" />
-        <option value="$PROJECT_DIR$/app/views/countries/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cities/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/application/_head_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/head_menu.coffee" />
@@ -232,7 +226,6 @@
         <option value="$PROJECT_DIR$/app/controllers/countries_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/regions_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/data generation/camp descriptions" />
-        <option value="$PROJECT_DIR$/app/views/cities/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/camps/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/region.rb" />
         <option value="$PROJECT_DIR$/app/models/country.rb" />
@@ -241,6 +234,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20180322215254_create_regions.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180322215280_create_cities.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180322215505_create_camps.rb" />
+        <option value="$PROJECT_DIR$/app/views/countries/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/regions/index.html.erb" />
       </list>
     </option>
   </component>
@@ -367,6 +363,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camps_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camps_base" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="regions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="camps_base" type="b2602c69:ProjectViewProjectNode" />
@@ -533,7 +536,7 @@
       <workItem from="1521754654979" duration="107008000" />
       <workItem from="1522131211783" duration="4634000" />
       <workItem from="1522162797832" duration="438000" />
-      <workItem from="1522152447177" duration="23109000" />
+      <workItem from="1522152447177" duration="23438000" />
     </task>
     <task id="LOCAL-00001" summary="Задана общая структура (Страна-Регион-Город-Турбаза) - сгенерированы шаблонные элементы">
       <created>1521756582569</created>
@@ -829,11 +832,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522174302296</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Реализовано каскадное удаление Стран - Регионов - Городов">
+      <created>1522176177668</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1522176177668</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135189000" />
+    <option name="totallyTimeSpent" value="135518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -924,7 +934,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Дебажим js" />
     <MESSAGE value="Добавлен timestamps в таблицы БД&#10;Причина -&gt; стандартный json builder пытается привязать поля created_at" />
     <MESSAGE value="Добавлен timestamps в таблицы БД&#10;Причина -&gt; стандартный json builder пытается привязать поля created_at&#10;P.S. БД была пересоздана, попытка реализовать дополнительную миграцию с добавлением полей timestamps вызывает ошибку в mysql - невозможно задать &quot;00-00..&quot; для Date-полей" />
     <MESSAGE value="regions index добавлена фильтрация по странам, city index - по регионам" />
@@ -949,7 +958,8 @@
     <MESSAGE value="Переведена просьба подствердить удаление записи о турбазе" />
     <MESSAGE value="Переведена просьба подтвердить удаление записи о турбазе" />
     <MESSAGE value="Добавлены новые слова для генерации описаний турбаз" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены новые слова для генерации описаний турбаз" />
+    <MESSAGE value="Реализовано каскадное удаление Стран - Регионов - Городов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано каскадное удаление Стран - Регионов - Городов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1030,14 +1040,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/regions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/countries/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1334,26 +1336,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/countries/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/camps/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="33" column="137" lean-forward="false" selection-start-line="33" selection-start-column="137" selection-end-line="33" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cities/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1434,6 +1420,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/countries/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cities/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/regions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
