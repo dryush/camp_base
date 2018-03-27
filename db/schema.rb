@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20180322215505) do
     t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
-  add_foreign_key "camps", "cities"
-  add_foreign_key "cities", "regions"
-  add_foreign_key "regions", "countries"
+  add_foreign_key "camps", "cities", on_delete: :cascade
+  add_foreign_key "cities", "regions", on_delete: :cascade
+  add_foreign_key "regions", "countries", on_delete: :cascade
 end
