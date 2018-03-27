@@ -34,7 +34,7 @@ class RegionsController < ApplicationController
 
     respond_to do |format|
       if @region.save
-        format.html { redirect_to @region, notice: 'Region was successfully created.' }
+        format.html { redirect_to @region, notice: 'Запись успешно создана!' }
         format.json { render :show, status: :created, location: @region }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class RegionsController < ApplicationController
   def update
     respond_to do |format|
       if @region.update(region_params)
-        format.html { redirect_to @region, notice: 'Region was successfully updated.' }
+        format.html { redirect_to @region, notice: 'Запись успешно обновлена!' }
         format.json { render :show, status: :ok, location: @region }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class RegionsController < ApplicationController
   def destroy
     @region.destroy
     respond_to do |format|
-      format.html { redirect_to regions_url, notice: 'Region was successfully destroyed.' }
+      format.html { redirect_to regions_url, notice: 'Запись успешно удалена!' }
       format.json { head :no_content }
     end
   end

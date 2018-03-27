@@ -63,7 +63,7 @@ class CampsController < ApplicationController
 
     respond_to do |format|
       if @camp.save
-        format.html { redirect_to @camp, notice: 'Camp was successfully created.' }
+        format.html { redirect_to @camp, notice: 'Запись успешно создана!' }
         format.json { render :show, status: :created, location: @camp }
       else
         format.html { render :new }
@@ -77,7 +77,7 @@ class CampsController < ApplicationController
   def update
     respond_to do |format|
       if @camp.update(camp_params)
-        format.html { redirect_to @camp, notice: 'Camp was successfully updated.' }
+        format.html { redirect_to @camp, notice: 'Запись успешно обновлена!' }
         format.json { render :show, status: :ok, location: @camp }
       else
         format.html { render :edit }
@@ -91,7 +91,7 @@ class CampsController < ApplicationController
   def destroy
     @camp.destroy
     respond_to do |format|
-      format.html { redirect_to camps_url, notice: 'Camp was successfully destroyed.' }
+      format.html { redirect_to camps_url, notice: 'Запись успешно удалена' }
       format.json { head :no_content }
     end
   end
