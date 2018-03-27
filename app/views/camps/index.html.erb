@@ -31,7 +31,7 @@
           <td><%= camp.description %></td>
           <td><%= link_to 'Подробнее', camp %></td>
           <td><%= link_to 'Редактировать', edit_camp_path(camp) %></td>
-          <td><%= link_to 'Удалить', camp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Удалить', camp, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить '+ camp.name + '?' } %></td>
         </tr>
       <% end %>
     </tbody>
