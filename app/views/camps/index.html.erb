@@ -2,7 +2,9 @@
 
   <h1>Список турбаз</h1>
 
-
+  <div align="right">
+    <%= link_to 'Добавить новую турбазу', new_camp_path%> <br>
+  </div>
   <%= render partial: 'application/location_select'%>
   <table class="table camps-table">
     <thead>
