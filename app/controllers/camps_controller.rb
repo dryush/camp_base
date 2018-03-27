@@ -5,12 +5,14 @@ class CampsController < ApplicationController
   # GET /camps.json
   def index
     if params[:city_id]
-      @camps = City.find(params[:city_id]).camps
+      @camps = City.find(params[:city_id]).camps.
+          sort_by { |c| [c.city.region.country.name, c.city.region.name, c.city.name, c.name] }
     elsif params[:region_id]
       @camps = Camp.find_by_sql('SELECT camps.* FROM regions
 	                                LEFT JOIN cities on cities.region_id = regions.id
                                   INNER JOIN camps on camps.city_id = cities.id
-                                  WHERE regions.id =' + params[:region_id])
+                                  WHERE regions.id =' + params[:region_id]).
+                                  sort_by { |c| [c.city.region.country.name, c.city.region.name, c.city.name, c.name] }
 
 =begin
       @camps = Region.where(region_id: params[:region_id]).left_joins(:cities).left_joins(:regions).select(:camp).jo
@@ -28,12 +30,13 @@ class CampsController < ApplicationController
                                   LEFT JOIN regions on regions.country_id = countries.id
                                   LEFT JOIN cities on cities.region_id = regions.id
                                   INNER JOIN camps on camps.city_id = cities.id
-                                  WHERE countries.id=' + params[:country_id])
+                                  WHERE countries.id=' + params[:country_id]).
+                                  sort_by { |c| [c.city.region.country.name, c.city.region.name, c.city.name, c.name] }
 
 
 
     else
-      @camps = Camp.all
+      @camps = Camp.all.sort_by { |c| [c.city.region.country.name, c.city.region.name, c.city.name, c.name] }
     end
   end
 
